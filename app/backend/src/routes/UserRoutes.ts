@@ -13,4 +13,10 @@ router.post(
   (req: Request, res: Response) => teamController.findOne(req, res),
 );
 
+router.get(
+  '/role',
+  ValidateLogin.validateToken,
+  (req: Request, res: Response) => teamController.findById(req, res),
+);
+
 export default router;
