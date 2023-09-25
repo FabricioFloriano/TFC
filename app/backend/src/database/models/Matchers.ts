@@ -32,6 +32,7 @@ MatchersModel.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'home_team_id',
+      references: { model: 'teams' },
     },
     homeTeamGoals: {
       type: DataTypes.INTEGER,
@@ -42,6 +43,7 @@ MatchersModel.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       field: 'away_team_id',
+      references: { model: 'teams' },
     },
     awayTeamGoals: {
       type: DataTypes.INTEGER,
