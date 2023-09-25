@@ -23,6 +23,11 @@ class MatchesService {
     await this.matchesModel.finishMatch(id);
     return true;
   }
+
+  public async updateMatch(id: number, homeTeam: number, awayTeam: number): Promise<boolean> {
+    await this.matchesModel.updateMatch(id, homeTeam, awayTeam);
+    return true;
+  }
 }
 
 export default MatchesService;
