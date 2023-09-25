@@ -18,6 +18,11 @@ class MatchesService {
     return allMatches.filter((match) => match.inProgress === false);
     return allMatches;
   }
+
+  public async finishMatch(id: number): Promise<boolean> {
+    await this.matchesModel.finishMatch(id);
+    return true;
+  }
 }
 
 export default MatchesService;
